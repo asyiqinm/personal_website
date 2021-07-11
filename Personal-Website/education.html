@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<audio controls>
+  <source src="video/rain.mp4"
+    type="audio/mpeg">
+  </audio>
+
+	<title>Education</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Education Page</h1>
+<a href="index.html">Home</a>
+<a href="biodata.html">Biodata</a>
+<a href="experience.html">Experience</a>
+<a href="education.html">Education</a>
+<a href="family.html">Family</a>
+<a href="gallery.html">Gallery</a> 
+<a href="skill.html">Skills</a>
+
+<p></p>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inconsolata', monospace;
+}
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: black;
+}
+
+.containerTab {
+  padding: 20px;
+  color: black;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: black;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>Education</h2>
+  <p>Click on the boxes below:</p>
+</div>
+
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:#f0e2a8;">
+    DEGREE
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:#e8ca93;">
+    DIPLOMA
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:	#f0e2a8;">
+    SPM
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:#f0e2a8">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>DEGREE</h2>
+  <p>I am currently taking my Degree in Bachelor of Business Administration (Hons) Finance at University Teknology MARA Kelantan </p>
+  <img src="images/uitmkb.jpg" width="400" height="350">
+
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background: #e8ca93">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>DIPLOMA</h2>
+  <p>I am taking my Diploma in Planting Industry Management at University Teknology MARA Campus Jasin Melaka</p>
+  <img src="images/uitmjasin.jpg" width="400" height="350">
+
+
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:#f0e2a8">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>SPM</h2>
+  <p>I spent my school days at Sekolah Menengah Kebangsaan Tendong from 2010 until 2015</p>
+  <img src="images/smktendong.jpg" width="500" height="250">
+</div>
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+
+</body>
+</html>
